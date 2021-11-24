@@ -83,7 +83,7 @@ class Solution {
     private int getHours(int[] piles, int speed) {
         int hours = 0;
         for (int pile : piles) {
-            hours += (pile + speed - 1) / speed;
+            hours += (pile + speed - 1) / speed;//该表达式需要学习，十分巧妙
         }
         return  hours;
     }
