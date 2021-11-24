@@ -66,7 +66,7 @@ class Solution {
             charToCount.put(ch, charToCount.getOrDefault(ch, 0)+1);
         }
 
-        int count = charToCount.size();
+        int count = charToCount.size();//count 的使用需要学习
         int start=0,end=0,minStart=0,minEnd=0;
         int minLength = Integer.MAX_VALUE;
         while (end < s.length() || (count == 0 && end == s.length())) {
