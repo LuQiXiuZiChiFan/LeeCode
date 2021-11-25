@@ -1,6 +1,6 @@
 package leetcode.editor.cn;
 
-//给定两个字符串 s 和 t 。返回 s 中包含 t 的所有字符的最短子字符串。如果 s 中不存在符合条件的子字符串，则返回空字符串 "" 。 
+4//给定两个字符串 s 和 t 。返回 s 中包含 t 的所有字符的最短子字符串。如果 s 中不存在符合条件的子字符串，则返回空字符串 "" 。
 //
 // 如果 s 中存在多个符合条件的子字符串，返回任意一个。 
 //
@@ -61,7 +61,7 @@ public class M1oyTv{
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public String minWindow(String s, String t) {
-        HashMap<Character, Integer> charToCount = new HashMap<>();
+/*        HashMap<Character, Integer> charToCount = new HashMap<>();
         for (char ch : t.toCharArray()) {
             charToCount.put(ch, charToCount.getOrDefault(ch, 0)+1);
         }
@@ -95,7 +95,8 @@ class Solution {
                 start++;
             }
         }
-        return minLength < Integer.MAX_VALUE ? s.substring(minStart, minEnd) : "";
+        return minLength < Integer.MAX_VALUE ? s.substring(minStart, minEnd) : "";*/
+
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

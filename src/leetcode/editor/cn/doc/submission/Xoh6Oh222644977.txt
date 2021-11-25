@@ -1,0 +1,35 @@
+class Solution {
+    public int divide(int a, int b) {
+        if(a==Integer.MIN_VALUE&&b==-1){
+            return Integer.MAX_VALUE;
+        }
+        int sign = 0;
+        if(a>0){
+            a=-a;
+            sign++;
+        }
+        if(b>0){
+            b=-b;
+            sign++;
+        }
+        int res = divideCore(a,b);
+        return sign==1?-res:res;
+        
+    }
+    public int divideCore(int a,int b){
+        int res = 0;
+        while(a<=b){
+            int value = b;
+            int qutient = 1;
+            while(value >= (Integer.MIN_VALUE>>1) && a<=value+value){
+                qutient += qutient;
+                value+=value;
+            }
+            res += qutient;
+            a-=value;
+        }
+        return res;
+    }
+}
+//runtime:1 ms
+//memory:35.5 MB
