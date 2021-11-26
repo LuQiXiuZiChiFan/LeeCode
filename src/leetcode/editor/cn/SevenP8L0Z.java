@@ -35,6 +35,8 @@ package leetcode.editor.cn;
 // 注意：本题与主站 47 题相同： https://leetcode-cn.com/problems/permutations-ii/ 
 // Related Topics 数组 回溯 👍 6 👎 0
 
+import java.util.List;
+
 public class SevenP8L0Z{
     public static void main(String[] args) {
         Solution solution = new SevenP8L0Z().new Solution();

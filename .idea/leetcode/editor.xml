@@ -39,6 +39,24 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/EightZf90G.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/EightZf90G.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/EightZf90G.java" />
+              <option name="questionId" value="1000279" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/IIQa4I.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/IIQa4I.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/IIQa4I.java" />
+              <option name="questionId" value="1000282" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/JJ0w9p.java">
           <value>
             <LeetcodeEditor>
@@ -171,6 +189,15 @@
               <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/WtcaE1.md" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/WtcaE1.java" />
               <option name="questionId" value="1000252" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/XagZNi.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/XagZNi.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/XagZNi.java" />
+              <option name="questionId" value="1000281" />
             </LeetcodeEditor>
           </value>
         </entry>
