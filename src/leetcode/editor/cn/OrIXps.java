@@ -57,6 +57,9 @@ package leetcode.editor.cn;
 // 注意：本题与主站 146 题相同：https://leetcode-cn.com/problems/lru-cache/ 
 // Related Topics 设计 哈希表 链表 双向链表 👍 12 👎 0
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class OrIXps{
     public static void main(String[] args) {
         Solution solution = new OrIXps().new Solution();
@@ -65,17 +68,73 @@ public class OrIXps{
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class LRUCache {
+    private ListNode head;
+    private ListNode tail;
+    private Map<Integer,ListNode> map;
+    int cap;
 
     public LRUCache(int capacity) {
+        map = new HashMap<>();
 
+        head = new ListNode(-1, -1);
+        tail = new ListNode(-1, -1);
+        head.next = tail;
+        tail.prev = head;
+
+        cap = capacity;
     }
     
     public int get(int key) {
+        ListNode node= map.get(key);
+        if (node == null) {
+            return -1;
+        }
+        moveToTail(node, node.value);
 
+        return node.value;
     }
     
     public void put(int key, int value) {
+        if (map.containsKey(key)) {
+            moveToTail(map.get(key), value);
+        } else {
+            if (map.size() == cap) {
+                ListNode toDelete = head.next;
+                deleteNode(toDelete);
+                map.remove(toDelete.key);
+            }
+            ListNode node = new ListNode(key, value);
+            insertToTail(node);
+            map.put(key, node);
+        }
+    }
 
+    private void moveToTail(ListNode node, int newValue) {
+        deleteNode(node);
+        node.value = newValue;
+        insertToTail(node);
+    }
+
+    private void deleteNode(ListNode node) {
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
+    }
+    private void insertToTail(ListNode node) {
+        tail.prev.next = node;
+        node.prev = tail.prev;
+        node.next = tail;
+        tail.prev = node;
+    }
+}
+class  ListNode{
+        public int key;
+        public int value;
+        public ListNode next;
+        public ListNode prev;
+
+    public ListNode(int k, int v) {
+        key = k;
+        value = v;
     }
 }
 
